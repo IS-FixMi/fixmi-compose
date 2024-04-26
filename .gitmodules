@@ -1,0 +1,3 @@
+[submodule "fixmi-microservizio-task"]
+	path = fixmi-microservizio-task
+	url = https://github.com/IS-FixMi/fixmi-microservizio-task
