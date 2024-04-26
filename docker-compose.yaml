@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  microservizio-task:
+    build: ./fixmi-microservizio-task
+    ports:
+      "3003:3002"
+    restart: always
+
+  microservizio-autenticazione:
+    build: ./fixmi-microservizio-task
+    ports:
+      "3002:3002"
+    restart: always
+
+#   micriservizio-database:
+#      build: ./microservizio-database
