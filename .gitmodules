@@ -1,3 +1,9 @@
 [submodule "fixmi-microservizio-task"]
 	path = fixmi-microservizio-task
 	url = https://github.com/IS-FixMi/fixmi-microservizio-task
+[submodule "fixmi-microservizio-autenticazione"]
+	path = fixmi-microservizio-autenticazione
+	url = https://github.com/IS-FixMi/fixmi-microservizio-autenticazione.git
+[submodule "fixmi-api-gateway"]
+	path = fixmi-api-gateway
+	url = https://github.com/IS-FixMi/fixmi-api-gateway.git
