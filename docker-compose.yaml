@@ -16,6 +16,12 @@ services:
 
     restart: always
 
+    environment:
+      MICROSERVIZIO_DB_IP: ${MICROSERVIZIO_DB_IP}
+      MICROSERVIZIO_DB_USERNAME: ${DB_USERNAME}
+      MICROSERVIZIO_DB_PASSWORD: ${DB_PASSWORD}
+      MICROSERVIZIO_AUTENTICAZIONE_IP: ${MICROSERVIZIO_AUTENTICAZIONE_IP}
+
     networks:
       fixmi-network:
         ipv4_address: ${MICROSERVIZIO_TASK_IP}
@@ -34,6 +40,12 @@ services:
 
     restart: always
 
+    environment:
+      MICROSERVIZIO_DB_IP: ${MICROSERVIZIO_DB_IP}
+      MICROSERVIZIO_DB_USERNAME: ${DB_USERNAME}
+      MICROSERVIZIO_DB_PASSWORD: ${DB_PASSWORD}
+      MICROSERVIZIO_AUTENTICAZIONE_IP: ${MICROSERVIZIO_AUTENTICAZIONE_IP}
+
     networks:
       fixmi-network:
         ipv4_address: ${MICROSERVIZIO_AUTENTICAZIONE_IP}
@@ -41,7 +53,7 @@ services:
 
   micriservizio-database:
 
-    container_name: "fiixmidb"
+    container_name: "fixmidb"
     image: mongo:5.0.8-focal
     restart: always
 
@@ -53,13 +65,12 @@ services:
         ipv4_address: ${MICROSERVIZIO_DB_IP}
 
     volumes:
-      - ./init_scripts:/docker-entrypoint-initdb.d  # Mount init script directory
+      - ./init_scripts/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js  # Mount init script
       - ./db:/data/db                               # Use this to persist data
                                                     # outside of the container
-
     environment:
-      MONGO_INITDB_ROOT_USERNAME: fixme
-      MONGO_INITDB_ROOT_PASSWORD: fixme
+      MONGO_INITDB_ROOT_USERNAME: ${DB_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSWORD}
 
     # listen to all ips, enable authentication
     command: ["mongod", "--bind_ip_all", "--auth"]
