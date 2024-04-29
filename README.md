@@ -2,7 +2,16 @@
 
 This repo hosts the docker compose for the fixmi app, running and connecting all the microservices
 
-Run with
+Please clone this repo with
+```bash
+git clone --recurse-submodules https://github.com/IS-FixMi/fixmi-compose.git
+```
+And inside each submodule, run
+```bash
+git pull
+```
+
+Run the infrastructure with
 ```bash
 sudo docker compose up
 ```
