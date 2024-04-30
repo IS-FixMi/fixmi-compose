@@ -5,10 +5,12 @@
 //  { name: "Jane", age: 25 }
 //]);
 
-db = db.getSiblingDB('Tasks');
+db_tasks = db.getSiblingDB('Tasks');
+db_users = db.getSiblingDB('Users');
+db_tasks.createCollection("tasks");
+db_users.createCollection("users");
 
-db.createCollection("tasks");
-db.tasks.insertMany([
+db_tasks.tasks.insertMany([
 {
   taskid: 1,
   name: 'Task1',
@@ -55,3 +57,17 @@ db.tasks.insertMany([
   taskStatus: 'Completata'
 }
 ]);
+
+db_users.users.insertOne({
+  id: ObjectId(),
+  email: "test@test.com",
+  password_hash: "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08", //spoiler: it's 'test'
+  permissionLevel: "Manager",
+  nome: "Pietro",
+  cognome: "Smusi",
+  dataDiNascita: new Date("1980-01-01"),
+  giornoDiAssunzione: Date(),
+  workTags: ["Negozio", "Riparazione", "Magazzino", "Assistenza", "Feedback"],
+
+
+})
