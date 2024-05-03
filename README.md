@@ -40,4 +40,9 @@ All the microservices run on the same network and are configured with a static i
 ### Database configuration
 
 You can put the database configuration in `init_scripts/init.js`
-When you run the database container, a `db/` directory will be create to maintain data persistency between docker instances.
+When you run the database container, a `db/` directory will be created to maintain data persistency between docker instances.
+
+To interact directly with the DB, enter inside docker and run
+```bash
+mongodh -u fixme -p fixme
+```
