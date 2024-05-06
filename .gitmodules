@@ -7,3 +7,9 @@
 [submodule "fixmi-api-gateway"]
 	path = fixmi-api-gateway
 	url = https://github.com/IS-FixMi/fixmi-api-gateway.git
+[submodule "fixmi-microservice-home"]
+	path = fixmi-microservice-home
+	url = https://github.com/IS-FixMi/fixmi-microservice-home.git
+[submodule "fixmi-microservizio-home"]
+	path = fixmi-microservizio-home
+	url = https://github.com/IS-FixMi/fixmi-microservizio-home.git
