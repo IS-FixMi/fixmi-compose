@@ -10,3 +10,9 @@
 [submodule "fixmi-microservice-gestione-dipendenti"]
 	path = fixmi-microservice-gestione-dipendenti
 	url = https://github.com/IS-FixMi/fixmi-microservice-gestione-dipendenti.git
+[submodule "fixmi-microservice-home"]
+	path = fixmi-microservice-home
+	url = https://github.com/IS-FixMi/fixmi-microservice-home.git
+[submodule "fixmi-microservizio-home"]
+	path = fixmi-microservizio-home
+	url = https://github.com/IS-FixMi/fixmi-microservizio-home.git
