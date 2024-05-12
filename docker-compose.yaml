@@ -76,6 +76,30 @@ services:
         ipv4_address: ${MICROSERVIZIO_HOME_IP}
 
 
+  microservizio-gestione-dipendenti:
+
+    build: ./fixmi-microservice-gestione-dipendenti
+
+    ports:
+      - "3008:3002"
+      - "3007:3001"
+
+    volumes:
+      - ./fixmi-microservice-gestione-dipendenti:/app
+
+    restart: always
+
+    environment:
+      MICROSERVIZIO_DB_IP: ${MICROSERVIZIO_DB_IP}
+      MICROSERVIZIO_DB_USERNAME: ${DB_USERNAME}
+      MICROSERVIZIO_DB_PASSWORD: ${DB_PASSWORD}
+      MICROSERVIZIO_AUTENTICAZIONE_IP: ${MICROSERVIZIO_AUTENTICAZIONE_IP}
+
+    networks:
+      fixmi-network:
+        ipv4_address: ${MICROSERVIZIO_GESTIONE_DIPENDENTI_IP}
+
+
   micriservizio-database:
 
     container_name: "fixmidb"
@@ -100,7 +124,7 @@ services:
     # listen to all ips, enable authentication
     command: ["mongod", "--bind_ip_all", "--auth"]
 
-
+  
   fixmi-api-gateway:
 
     build: ./fixmi-api-gateway
