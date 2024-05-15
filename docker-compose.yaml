@@ -78,14 +78,14 @@ services:
 
   microservizio-gestione-dipendenti:
 
-    build: ./fixmi-microservice-gestione-dipendenti
+    build: ./fixmi-microservizio-gestione-dipendenti
 
     ports:
       - "3008:3002"
       - "3007:3001"
 
     volumes:
-      - ./fixmi-microservice-gestione-dipendenti:/app
+      - ./fixmi-microservizio-gestione-dipendenti:/app
 
     restart: always
 
