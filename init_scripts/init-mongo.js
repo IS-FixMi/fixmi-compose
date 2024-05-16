@@ -21,7 +21,7 @@ db_tasks.tasks.insertMany([
   cognomeRichiedente: 'Rossi',
   emailRichiedente: 'email@email.com',
   phoneNumber: '3334445566',
-  assignedTo: '663159d0ec263e41dc9d9f96`
+  assignedTo: '663159d0ec263e41dc9d9f96'
 },
 {
   taskid: ObjectId(),
@@ -29,8 +29,8 @@ db_tasks.tasks.insertMany([
   description: 'Description2',
   taskTag: 'Assistenza',
   taskStatus: 'In Lavorazione',
-  emailRichiedente: 'email@email.com'
-  assignedTo: '663159d0ec263e41dc9d9f96`
+  emailRichiedente: 'email@email.com',
+  assignedTo: '663159d0ec263e41dc9d9f96'
 },
 {
   taskid: ObjectId(),
@@ -43,7 +43,7 @@ db_tasks.tasks.insertMany([
   velocitaRiparazione: 'velocissimo',
   soddisfazioneRiparazione: 'soddisfattissimo',
   soddisfazioneSitoWeb: 'soddisfattissimo',
-  assignedTo: '663159d0ec263e41dc9d9f96`
+  assignedTo: '663159d0ec263e41dc9d9f96'
 },
 {
   taskid: ObjectId(),
@@ -51,7 +51,7 @@ db_tasks.tasks.insertMany([
   description: 'Description4',
   taskTag: 'Negozio',
   taskStatus: 'In Lavorazione',
-  assignedTo: 'e@e.com`
+  assignedTo: 'e@e.com'
 },
 {
   taskid: ObjectId(),
@@ -59,7 +59,7 @@ db_tasks.tasks.insertMany([
   description: 'Description5',
   taskTag: 'Magazzino',
   taskStatus: 'Completata',
-  assignedTo: '663159d0ec263e41dc9d9f96`
+  assignedTo: '663159d0ec263e41dc9d9f96'
 },
 
 {
@@ -68,7 +68,7 @@ db_tasks.tasks.insertMany([
   description: 'Description6',
   taskTag: 'Magazzino',
   taskStatus: 'In Pausa',
-  assignedTo: '663159d0ec263e41dc9d9f96`
+  assignedTo: '663159d0ec263e41dc9d9f96'
 },
 {
   taskid: ObjectId(),
@@ -76,13 +76,14 @@ db_tasks.tasks.insertMany([
   description: 'Description7',
   taskTag: 'Magazzino',
   taskStatus: 'Da Eseguire',
-  assignedTo: '663159d0ec263e41dc9d9f96`
+  assignedTo: '663159d0ec263e41dc9d9f96'
+}
 ]);
 
 db_users.users.insertMany([
 {
   id: ObjectId(),
-  email: "test@test.com",
+  email: "manager@test.com",
   password_hash: "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08", //spoiler: it's 'test'
   permissionLevel: "Manager",
   nome: "Pietro",
@@ -110,5 +111,5 @@ db_users.users.insertMany([
   password_hash: "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08", //spoiler: it's 'test'
   permissionLevel: "Cliente",
 }
-
+]
 );
