@@ -125,17 +125,21 @@ services:
     command: ["mongod", "--bind_ip_all", "--auth"]
 
   
-  fixmi-api-gateway:
+  fixmi-reverse-proxy:
 
-    build: ./fixmi-api-gateway
+    build: ./fixmi-reverse-proxy
 
     ports:
       - "7777:7777"
 
     volumes:
-      - ./fixmi-api-gateway/nginx.conf:/etc/nginx/nginx.conf
+      - ./fixmi-reverse-proxy/nginx.conf:/etc/nginx/nginx.conf
 
     tty: true
+
+    networks:
+      fixmi-network:
+        ipv4_address: ${REVERSE_PROXY_IP}
 
 networks:
   fixmi-network:
