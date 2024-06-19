@@ -13,3 +13,6 @@
 [submodule "fixmi-microservizio-home"]
 	path = fixmi-microservizio-home
 	url = https://github.com/IS-FixMi/fixmi-microservizio-home.git
+[submodule "fixmi-reverse-proxy"]
+	path = fixmi-reverse-proxy
+	url = https://github.com/IS-FixMi/fixmi-reverse-proxy.git
